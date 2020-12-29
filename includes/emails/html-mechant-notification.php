@@ -16,7 +16,7 @@ echo esc_html( $email_content );
 ?>
 <?php foreach ( $email_actions as $an_action ) : ?>
 <div>
-	<a href="<?php echo esc_url( $opened_tracking_url . '\/action\/' . $an_action->id ); ?>">
+	<a href="<?php echo esc_url( $trigger_note_action_url . $an_action->id ); ?>">
 		<?php
 			echo esc_html( $an_action->label );
 		?>
