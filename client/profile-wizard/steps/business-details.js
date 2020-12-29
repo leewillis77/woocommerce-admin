@@ -12,8 +12,6 @@ import {
 	CheckboxControl,
 	FormToggle,
 	Popover,
-	__experimentalText,
-	Text as TextComponent,
 } from '@wordpress/components';
 import interpolateComponents from 'interpolate-components';
 import { withDispatch, withSelect } from '@wordpress/data';
@@ -34,6 +32,7 @@ import {
 	SETTINGS_STORE_NAME,
 } from '@woocommerce/data';
 import { recordEvent } from '@woocommerce/tracks';
+import { Text } from '@woocommerce/experimental';
 
 /**
  * Internal dependencies
@@ -43,8 +42,6 @@ import { CurrencyContext } from '../../lib/currency-context';
 import { createNoticesFromResponse } from '../../lib/notices';
 
 const wcAdminAssetUrl = getSetting( 'wcAdminAssetUrl', '' );
-
-const Text = TextComponent || __experimentalText;
 
 class BusinessDetails extends Component {
 	constructor( props ) {
